@@ -24,13 +24,13 @@ int main(int argc, char** argv)
    vector<Rect>faces;
 
    while (true) 
-	{
+   {
       faceDetector.detectMultiScale(video_stream, faces, 1.1, 4, CASCADE_SCALE_IMAGE, Size(30, 30));
 
       real_time.read(video_stream);
 
       for (int i = 0; i < faces.size(); i++)
-	  { 
+      { 
          Mat faceROI = video_stream(faces[i]);
 
          int x = faces[i].x;
@@ -44,7 +44,7 @@ int main(int argc, char** argv)
       imshow("Face Detection", video_stream);
       
       if (waitKey(10) == 27)
-	  { 
+      { 
          break;
       }
    }
