@@ -11,10 +11,10 @@ int main()
 	cv::Mat imgGray,imgBlur,imgCanny,imgDil,imgErode;
 
 	cv::resize(img,img,cv::Size(500,500));      
-    cv::resize(img,imgGray,cv::Size(500,500));
-    cv::resize(img,imgBlur,cv::Size(500,500));
-    cv::resize(img,imgCanny,cv::Size(500,500));
-    cv::resize(img,imgDil,cv::Size(500,500));
+        cv::resize(img,imgGray,cv::Size(500,500));
+        cv::resize(img,imgBlur,cv::Size(500,500));
+        cv::resize(img,imgCanny,cv::Size(500,500));
+        cv::resize(img,imgDil,cv::Size(500,500));
 
 	cv::cvtColor(img,imgGray,cv::COLOR_BGR2GRAY);
 	cv::GaussianBlur(img, imgBlur, cv::Size(3,3),3,0);
