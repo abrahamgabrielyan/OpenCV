@@ -20,8 +20,8 @@ int main()
 	img = cv::imread(path);
 	
 	cv::resize(img, img, cv::Size(500,500));
-    cv::resize(img, imgHSV, cv::Size(500,500));
-    cv::resize(img, mask, cv::Size(500,500));
+        cv::resize(img, imgHSV, cv::Size(500,500));
+        cv::resize(img, mask, cv::Size(500,500));
 	
 	cv::cvtColor(img, imgHSV, cv::COLOR_BGR2HSV);
 
@@ -36,7 +36,7 @@ int main()
 	while(true)
 	{			
 		cv::Scalar lower(hmin, smin, vmin);
-    	cv::Scalar upper(hmax, smax, vmax);
+    	        cv::Scalar upper(hmax, smax, vmax);
 							
 		cv::inRange(imgHSV, lower, upper, mask);
 
